@@ -1,0 +1,151 @@
+{
+  "courseModels": [
+    {
+      "id": 1,
+      "name": "Introduction to React Native",
+      "instructor": "John Doe",
+      "description": "Learn the basics of React Native development and build your first mobile app.",
+      "enrollmentStatus": "Open",
+      "thumbnail": "https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "duration": "8 weeks",
+      "schedule": "Tuesdays and Thursdays, 6:00 PM - 8:00 PM",
+      "location": "Online",
+      "prerequisites": ["Basic JavaScript knowledge", "Familiarity with React"],
+      "syllabus": [
+        {
+          "week": 1,
+          "topic": "Introduction to React Native",
+          "content": "Overview of React Native, setting up yourdevelopment environment."
+        },
+        {
+          "week": 2,
+          "topic": "Building Your First App",
+          "content": "Creating a simple mobile app using React Native components."
+        }
+      ],
+      "students": [
+        {
+          "id": 101,
+          "name": "Alice Johnson",
+          "email": "alice@gmail.com"
+        },
+        {
+          "id": 102,
+          "name": "Bob Smith",
+          "email": "bob@gmail.com"
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "name": "Introduction python",
+      "instructor": "John ",
+      "description": "Learn the basics of python.",
+      "enrollmentStatus": "Open",
+      "thumbnail": "https://images.unsplash.com/photo-1649180556628-9ba704115795?q=80&w=2062&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "duration": "12 weeks",
+      "schedule": "Tuesdays and Thursdays, 6:00 PM - 8:00 PM",
+      "location": "Online",
+      "prerequisites": ["Basic python knowledge"],
+      "syllabus": [
+        {
+          "week": 1,
+          "topic": "Introduction to python",
+          "content": "Overview of python, setting up yourdevelopment environment."
+        },
+        {
+          "week": 2,
+          "topic": "write small program",
+          "content": "write a basic program of python"
+        }
+      ],
+      "students": [
+        {
+          "id": 101,
+          "name": "priya",
+          "email": "priya@gmail.com"
+        },
+        {
+          "id": 102,
+          "name": "Bob",
+          "email": "bob@gmail.com"
+        }
+      ]
+    },
+
+    {
+      "id": 3,
+      "name": "Introduction to Java",
+      "instructor": "Doe",
+      "description": "Learn the basics of java .",
+      "enrollmentStatus": "Open",
+      "thumbnail": "https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "duration": "8 weeks",
+      "schedule": "Tuesdays and Thursdays, 6:00 PM - 8:00 PM",
+      "location": "Online",
+      "prerequisites": ["Basic Java knowledge", "Familiarity with c"],
+      "syllabus": [
+        {
+          "week": 1,
+          "topic": "Introduction to java",
+          "content": "Overview of java, setting up yourdevelopment environment."
+        },
+        {
+          "week": 2,
+          "topic": "Building Your java program",
+          "content": "Creating a simple program."
+        }
+      ],
+      "students": [
+        {
+          "id": 101,
+          "name": "Alice Johnson",
+          "email": "alice@gmail.com"
+        },
+        {
+          "id": 102,
+          "name": "Bob Smith",
+          "email": "bob@gmail.com"
+        }
+      ]
+    },
+
+    {
+      "id": 4,
+      "name": "Introduction to Next.js",
+      "instructor": "lahari",
+      "description": "Learn the basics of next.js development and build your first mobile app.",
+      "enrollmentStatus": "Open",
+      "thumbnail": "https://images.unsplash.com/photo-1643116774075-acc00caa9a7b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "duration": "8 weeks",
+      "schedule": "Tuesdays and Thursdays, 6:00 PM - 8:00 PM",
+      "location": "Online",
+      "prerequisites": ["Basic JavaScript knowledge", "Familiarity with React"],
+      "syllabus": [
+        {
+          "week": 1,
+          "topic": "Introduction to Next.js",
+          "content": "Overview of next.js, setting up yourdevelopment environment."
+        },
+        {
+          "week": 2,
+          "topic": "Building Your First App",
+          "content": "Creating a simple mobile app using React components."
+        }
+      ],
+      "students": [
+        {
+          "id": 101,
+          "name": "sriya",
+          "email": "sriya@gmail.com"
+        },
+        {
+          "id": 102,
+          "name": "lalli",
+          "email": "lalli@gmail.com.com"
+        }
+      ]
+    }
+  ]
+}
