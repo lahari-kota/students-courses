@@ -10,6 +10,13 @@ function Home(props) {
     status: false,
     cardDetails: "",
   });
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchByInstructor, setSearchByInstructor] = useState("");
+  const [filters, setFilters] = useState({
+    searchTerm: "",
+    instructor: "",
+  });
+  const [filteredCourses, setFilteredCourses] = useState([]);
 
   const {
     mutate: getAllCoursesFn,
@@ -21,29 +28,35 @@ function Home(props) {
   } = useGetCourses();
 
   useEffect(() => {
+    // debugger;
+    let newItems = getAllCoursesData;
+    if (searchTerm) {
+      newItems = newItems?.filter((eachCourse) =>
+        eachCourse.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setFilteredCourses(newItems);
+    }
+
+    if (searchByInstructor) {
+      newItems = newItems?.filter((eachCourse) =>
+        eachCourse.instructor
+          .toLowerCase()
+          .includes(searchByInstructor.toLowerCase())
+      );
+    }
+
+    setFilteredCourses(newItems);
+  }, [searchTerm, searchByInstructor]);
+
+  useEffect(() => {
+    if (getAllCoursesSuccess) {
+      setFilteredCourses(getAllCoursesData);
+    }
+  }, [getAllCoursesSuccess]);
+
+  useEffect(() => {
     getAllCoursesFn();
   }, []);
-
-  const openEditPopup = (course) => {
-    setShowEditPopup({
-      status: true,
-      cardDetails: course,
-    });
-  };
-  const closeEditPopup = () => {
-    setShowEditPopup({
-      status: false,
-      courseDetails: "",
-    });
-  };
-
-  function openAddPopup() {
-    setShowAddPopup(true);
-  }
-
-  function closeAddPopup() {
-    setShowAddPopup(false);
-  }
 
   if (getAllCoursesLoading) {
     return (
@@ -53,23 +66,41 @@ function Home(props) {
     );
   }
 
-  if (showAddPopup || showEditPopup.status) {
-    return (
-      <Courses
-        isEditing={showEditPopup.status}
-        courseDetails={showEditPopup.status}
-        closeAddPopup={closeAddPopup}
-      />
-    );
-  }
   return (
     <div className="home-container">
       <div className="home container-center wrapper page flex flex-col gap-10">
         <div>
-          <h1 className="custom-title">Courses</h1>
-          <div className="custom-underline  mb-10"></div>
+          <div className="top-container">
+            <h1 className="custom-title">Courses</h1>
+            <div className="custom-underline  mb-10"></div>
+          </div>
+          <div className="form-container flex gap-4 justify-start w-full mb-10">
+            <div className="course-search  ">
+              <input
+                type="text"
+                className="search  bg-slate-100 px-4 py-2 text-base rounded   "
+                name="search"
+                id="search"
+                placeholder="search by course names"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+            <div className="instructor-search">
+              <input
+                type="text"
+                className="instructor  bg-slate-100 px-4 py-2 text-base rounded"
+                name="search"
+                id="search"
+                placeholder="serach by instructor names"
+                value={searchByInstructor}
+                onChange={(e) => setSearchByInstructor(e.target.value)}
+                t
+              />
+            </div>
+          </div>
           <div className="list-of-courses w-full grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-6">
-            {getAllCoursesData?.map((eachCourse) => {
+            {filteredCourses?.map((eachCourse) => {
               const {
                 id,
                 name,
